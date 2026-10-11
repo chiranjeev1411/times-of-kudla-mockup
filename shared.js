@@ -23,6 +23,16 @@ document.querySelectorAll('[data-horo]').forEach(function(root){
     grid.appendChild(d);});
   grid.firstChild.click();
 });
+(function(){var bar=document.querySelector('.themebar');if(!bar)return;
+  var cur=document.documentElement.getAttribute('data-theme')||'original';
+  bar.querySelectorAll('button').forEach(function(b){
+    if(b.dataset.t===cur)b.classList.add('on');
+    b.addEventListener('click',function(){
+      var t=b.dataset.t;
+      if(t==='original')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',t);
+      try{localStorage.setItem('tok-theme',t)}catch(e){}
+      bar.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});
+    });});})();
 document.querySelectorAll('[data-zoom]').forEach(function(b){b.addEventListener('click',function(){
   var cur=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--z'))||1;
   cur=Math.min(1.5,Math.max(0.85,cur+parseFloat(b.dataset.zoom)));
