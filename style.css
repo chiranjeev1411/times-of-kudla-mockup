@@ -40,10 +40,10 @@ nav.cats a.flash{color:var(--saffron)}
 .ticker .wrap{display:flex;align-items:center;gap:12px;overflow:hidden;padding:7px 16px}
 .ticker .lbl{background:#c8231d;color:#fff;font:700 11px 'Segoe UI',Arial;letter-spacing:.05em;padding:4px 9px;border-radius:3px;flex:none}
 .ticker .run{white-space:nowrap;overflow:hidden;flex:1}
-.ticker .run span{display:inline-block;padding-left:100%;animation:run 38s linear infinite;font-size:14px}
+.ticker .run span{display:inline-block;animation:run 45s linear infinite;font-size:14px;padding-right:60px}
 .ticker .run:hover span{animation-play-state:paused}
-@keyframes run{to{transform:translateX(-100%)}}
-@media (prefers-reduced-motion:reduce){.ticker .run span{animation:none;padding-left:0}}
+@keyframes run{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker .run span{animation:none}}
 .layout{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;padding:22px 0 36px}.layout>*,.hero>*{min-width:0}
 @media (min-width:1000px){.layout{grid-template-columns:minmax(0,1fr) 320px}}
 .sec{margin-bottom:30px}
@@ -79,9 +79,9 @@ h3.t{font-family:'Noto Serif Kannada',serif;font-size:16px;line-height:1.45;font
 .li time{font:700 12px 'Segoe UI',Arial;color:var(--maroon);padding-top:3px}
 .li .c{font:600 10.5px 'Segoe UI',Arial;color:var(--grey);text-transform:uppercase;letter-spacing:.04em;display:block}
 .grid2{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
-@media (min-width:640px){.grid2{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(4,1fr)}}
 .grid3,.grid4{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
-.card .ph{margin-bottom:8px}
+@media (min-width:640px){.grid2{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(4,1fr)}}
+.card .ph{margin-bottom:8px}.sec>.card .ph{aspect-ratio:16/8}
 .tabs{display:flex;gap:6px;overflow-x:auto;margin-bottom:14px;scrollbar-width:none}
 .tabs button{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;font:600 13px 'Noto Sans Kannada',Arial;cursor:pointer;white-space:nowrap;color:var(--ink)}
 .tabs button.on{background:var(--maroon);color:#fff;border-color:var(--maroon)}
