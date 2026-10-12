@@ -65,6 +65,19 @@ nav.cats a.flash{color:var(--saffron)}
 .sh a.more{font:600 12px 'Segoe UI',Arial;color:var(--maroon)}
 .ph{position:relative;aspect-ratio:16/10;border-radius:6px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,#d9c9a8,#b98a5a)}
 .ph .ic{width:34%;max-width:70px;stroke:rgba(255,255,255,.9);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.hdr-r .epbtn{background:#c8231d;animation:epglow 2.8s ease-in-out infinite}
+.eplink{background:#c8231d;border-radius:14px;padding:3px 10px;animation:epglow 2.8s ease-in-out infinite}
+nav.cats a.ep{background:#c8231d;color:#fff;border-radius:6px;margin:5px 0 5px 6px;padding:6px 13px;border-bottom:0;animation:epglow 2.8s ease-in-out infinite}
+nav.cats a.ep:hover,nav.cats a.ep.on{background:#d92b24}
+.btn.red{background:#c8231d;color:#fff;animation:epglow 2.8s ease-in-out infinite}
+@keyframes epglow{0%,100%{box-shadow:0 0 0 0 rgba(230,60,50,0)}50%{box-shadow:0 0 14px 3px rgba(235,70,60,.55)}}
+@media (prefers-reduced-motion:reduce){.hdr-r .epbtn,.eplink,nav.cats a.ep,.btn.red{animation:none;box-shadow:0 0 10px 2px rgba(235,70,60,.4)}}
+.lipibtn{display:flex;align-items:center;border:2px solid var(--saffron);color:var(--maroon);border-radius:10px;padding:6px 14px;background:#fff}
+.lipibtn span{font:700 15px/1.1 'Noto Sans Kannada',Arial}.lipibtn small{display:block;font:600 10px 'Segoe UI',Arial;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
+.lipi{background:linear-gradient(135deg,var(--tint),#fff);border:1px dashed var(--saffron);border-radius:8px;padding:14px;text-align:center}
+.lipi .big{font:800 34px 'Noto Serif Kannada',serif;color:var(--maroon);line-height:1.2}
+.wx{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center;font:13px 'Segoe UI',Arial}
+.wx div{background:var(--tint2);border-radius:8px;padding:8px 4px}.wx b{display:block;font-size:16px;color:var(--maroon-d)}
 .ic2{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;margin-right:5px;vertical-align:-3px}
 .eplink{display:inline-flex;align-items:center;font-weight:700;color:#fff}
 .hdr-r{display:flex;align-items:center;gap:12px}
